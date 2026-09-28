@@ -1,0 +1,46 @@
+4a) 64206 -> 1111 1010 1100 1110, 175316, FACE
+4b) 48879 -> 1011 1110 1110 1111, 137357, BEEF
+4c) 57005 -> 1101 1110 1010 1101, 157255, DEAD
+
+5a1) 0x2A -> 2 * 16 + 10 = 42
+5a2) 0xFF -> 15 * 16 + 15 = 255
+5a3) 0111 1110 1000 -> 7 * 256 + 14 * 16 + 8 = 2024
+5a4) 1010 1100 1110 1101 -> 10 * 4096 + 12 * 256 + 14 * 16 + 13 = 44269
+
+5b1) 0x2A -> 42 (same as unsigned)
+5b2) 0xFF -> -128 + 127 = -1
+5b3) 0111 1110 1001 -> 2025 (5a3 + 1)
+5b4) 1010 1100 1110 1101 -> -(2^15) + 2 * 4096 + 12 * 256 + 14 * 16 + 13 = -21267
+
+5c1) 0x49 -> I
+5c2) 0110 1100 0110 1111 0111 0110 0110 0101 -> love
+5c3) 0x45444553 -> EDES
+5c4) 3,354,673 -> 301
+
+6i) What aspect of the python style guide do you disagree with most and why?
+
+I've been writing python for so long now I can't find much I disagree with, it's all just seems like the right
+way of doing things. I used to dislike the 4 space indentation and use of colons everywhere, and I still do
+prefer the C/C++ brackets style, but these days the act of typing a : or a { is exactly the same (they are right 
+next to each other on my keyboard), as the editor will handle placing the correct indentation anyway.
+
+I do disagree with the fact that private fields and methods have a leading underscore, as I don't like names being 
+used to indicate properties like that. I moreso dislike this because "private" things in a python class aren't
+actually private at all, which goes against everything I have learned about encapsulation. I can admit that I've
+had to access private fields and methods of a library once to get stuff working, however.
+
+6ii) Do you agree that whitespace should matter in Python and why?
+
+I think it should, as it makes things very readable, especially with 4 spaces of indentation. Good code is likely not
+going to have too much indentation, and most editors are equipped to automatically handle indentation. For new users,
+you're also not going to run into the mismatched brace issue with invalid indentation. On the other hand, I have 
+witnessed people use the wrong number of spaces in indentation, which when teaching coding is an issue that people
+have trouble understanding. Having this standard promotes good practices later on, as I have taught C++ to people, and 
+its tolerance of bad formatting can result in people learning to write badly formatted code.
+
+6iii) What is the most interesting thing you found in the style guide and why?
+
+I have never heard of the double leading underscore causing fields to be named unique to its class. I have never been
+in a case where that would be necessary. The example of having fields unique to an instance of a class despite
+inheritance makes this a feature only for people implementing complicated functionality for libraries, and not someone
+just writing a script or small project.
