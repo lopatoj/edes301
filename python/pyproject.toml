@@ -1,0 +1,18 @@
+[project]
+name = "edes301"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "adafruit-bbio>=1.2.5",
+]
+
+[project.scripts]
+blink = "edes301.blink:main"
+button = "edes301.button:main"
+calc = "edes301.calc:main"
+
+[build-system]
+requires = ["uv_build>=0.12.21,<0.13.0"]
+build-backend = "uv_build"

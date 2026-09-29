@@ -1,0 +1,20 @@
+version = 1
+revision = 3
+requires-python = ">=3.11"
+
+[[package]]
+name = "adafruit-bbio"
+version = "1.2.5"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/86/07/4426271d80e5b893c7a3eab7f3fd30db58502e16d89644fbe186a218c6dc/adafruit_bbio-1.2.5.tar.gz", hash = "sha256:ce402ee1392dbc75f9f77c2e8022687fb827dab6f5fdfc8740fe87a079b1074d", size = 65539, upload-time = "2026-06-30T22:04:41.439Z" }
+
+[[package]]
+name = "edes301"
+version = "0.1.0"
+source = { editable = "." }
+dependencies = [
+    { name = "adafruit-bbio" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "adafruit-bbio", specifier = ">=1.2.5" }]

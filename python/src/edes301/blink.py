@@ -40,8 +40,12 @@ LED = "USR3"
 
 GPIO.setup(LED, GPIO.OUT)
 
-while True:
-    GPIO.output(LED, 1)
-    time.sleep(DELAY)
-    GPIO.output(LED, 0)
-    time.sleep(DELAY)
+def main():
+    while True:
+        GPIO.output(LED, 1)
+        time.sleep(DELAY)
+        GPIO.output(LED, 0)
+        time.sleep(DELAY)
+
+if __name__=="__main__":
+    main()
