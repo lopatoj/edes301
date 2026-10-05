@@ -108,7 +108,7 @@ def get_user_input():
 # NOTE - is being imported into another python file:
 # NOTE - import simple_calc
 # NOTE - the the "__name__" will be the module name, i.e. the string "simple_calc"
-if __name__ == "__main__":
+def main():
     # NOTE - Need to add main calculator functionality:
     # NOTE - - Use a loop construct to repeat the operation
     # NOTE - - Get the input from the user (i.e. use function created above)
@@ -122,3 +122,6 @@ if __name__ == "__main__":
             continue
         result = operators[op](num1, num2)
         print(f"{num1} {op} {num2} = {result}")
+
+if __name__ == "__main__":
+    main()

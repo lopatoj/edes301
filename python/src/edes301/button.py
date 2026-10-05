@@ -308,7 +308,7 @@ class Button:
 # Main script
 # ------------------------------------------------------------------------
 
-if __name__ == "__main__":
+def main():
     print("Button Test")
 
     # Create instantiation of the button
@@ -400,3 +400,6 @@ if __name__ == "__main__":
         pass
 
     print("Test Complete")
+
+if __name__=="__main__":
+    main()
